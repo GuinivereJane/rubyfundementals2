@@ -1,10 +1,15 @@
 students = {
   :cohort1 => 34,
-  :cohort2 => 42,
   :cohort3 => 22,
   :cohort4 => 43
 }
-
+total = 0
 students.each do |cohort,number|
-  puts "#{cohort}: #{number} students"
+  number = number * 1.05
+  puts "#{cohort}: #{number.round} students"
+  total += number
 end
+
+puts students.keys
+
+puts "the total number of students after the %5 increase is #{total.round}"

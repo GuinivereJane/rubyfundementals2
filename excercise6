@@ -1,6 +1,7 @@
-grocery_list = ["carrots", "toilet paper","apples", "salmon", "rice" ]
+grocery_list = ["carrots", "toilet paper","apples", "rice" ]
 
 def output_list(list)
+  list = list.sort
   list.each {|item| puts "* #{item}"}
   bananas = nil
   list.each {|item| bananas ||= item == "bananas" ? true : nil}

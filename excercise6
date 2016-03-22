@@ -1,0 +1,13 @@
+grocery_list = ["carrots", "toilet paper","apples", "salmon", "rice" ]
+
+def output_list(list)
+  list.each {|item| puts "* #{item}"}
+  bananas = nil
+  list.each {|item| bananas ||= item == "bananas" ? true : nil}
+  #bananas = list.find(bananas)  #I could have done it this way too !!!
+  puts "Number of items on list : #{list.count}"
+  puts bananas ? "you need to buy bananas" : "you do not need to buy bananas"
+  puts "The second item on the list is #{list[1]}"
+end
+
+output_list(grocery_list)
